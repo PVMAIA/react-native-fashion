@@ -1,7 +1,7 @@
 import "react-native-gesture-handler";
 import * as React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
-import { Onboarding } from "./src/Authentication";
+import { Onboarding, Welcome } from "./src/Authentication";
 import { LoadAssets } from "./src/components";
 
 const fonts = {
@@ -18,10 +18,8 @@ const AuthenticationNavigator = () => {
         headerShown: false,
       }}
     >
-      <AuthenticationStack.Screen
-        name="Onboarding"
-        component={Onboarding}
-      ></AuthenticationStack.Screen>
+      <AuthenticationStack.Screen name="Onboarding" component={Onboarding} />
+      <AuthenticationStack.Screen name="Welcome" component={Welcome} />
     </AuthenticationStack.Navigator>
   );
 };
